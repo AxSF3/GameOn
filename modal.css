@@ -713,6 +713,434 @@ left: 190px;
 
 
  @media screen and (max-width: 535px) {
+  .formData #error-logo-1 {
+    left: 240px;
+  
+   
+   }
+ }
+
+ @media screen and (max-width: 500px) {
+  .formData #error-logo-1 {
+    left: 120px;
+    
+   
+   }
+ }
+
+ @media screen and (max-width: 440px) {
+  .formData #error-logo-1 {
+    left: 100px;
+    
+   
+   }
+ }
+
+ @media screen and (max-width: 420px) {
+  .formData #error-logo-1 {
+    left: 80px;
+    
+   
+   }
+ }
+
+ 
+ @media screen and (max-width: 400px) {
+  .formData #error-logo-1 {
+    left: 30px;
+    
+   
+   }
+ }
+
+
+ 
+ @media screen and (max-width: 380px) {
+  .formData #error-logo-1 {
+    left: 230px;
+    top: -100px;
+   
+   }
+ }
+
+ @media screen and (max-width: 370px) {
+  .formData #error-logo-1 {
+    left: 220px;
+ 
+   
+   }
+ }
+
+ @media screen and (max-width: 350px) {
+  .formData #error-logo-1 {
+    left: 120px;
+ 
+   
+   }
+ }
+
+
+ @media screen and (max-width: 320px) {
+  .formData #error-logo-1 {
+    left: 100px;
+ 
+   
+   }
+ }
+
+
+
+
+
+
+
+
+ @media screen and (max-width: 535px) {
+  .formData #error-logo-2 {
+    left: 240px;
+  
+   
+   }
+ }
+
+ @media screen and (max-width: 500px) {
+  .formData #error-logo-2 {
+    left: 120px;
+    
+   
+   }
+ }
+
+ @media screen and (max-width: 440px) {
+  .formData #error-logo-2 {
+    left: 100px;
+    
+   
+   }
+ }
+
+ @media screen and (max-width: 420px) {
+  .formData #error-logo-2 {
+    left: 80px;
+    
+   
+   }
+ }
+
+ 
+ @media screen and (max-width: 400px) {
+  .formData #error-logo-2 {
+    left: 30px;
+    
+   
+   }
+ }
+
+
+ 
+ @media screen and (max-width: 380px) {
+  .formData #error-logo-2 {
+    left: 230px;
+
+   
+   }
+ }
+
+ @media screen and (max-width: 370px) {
+  .formData #error-logo-2 {
+    left: 220px;
+    top: -100px;
+   
+   }
+ }
+
+ @media screen and (max-width: 350px) {
+  .formData #error-logo-2 {
+    left: 120px;
+ 
+   
+   }
+ }
+
+
+ @media screen and (max-width: 320px) {
+  .formData #error-logo-2 {
+    left: 100px;
+ 
+   
+   }
+ }
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width: 535px) {
+  .formData #error-logo-3 {
+    left: 80px;
+  
+   
+   }
+ }
+
+ @media screen and (max-width: 500px) {
+  .formData #error-logo-3 {
+    left: 50px;
+    
+   
+   }
+ }
+
+ @media screen and (max-width: 440px) {
+  .formData #error-logo-3 {
+    left: 50px;
+    
+   
+   }
+ }
+
+ @media screen and (max-width: 420px) {
+  .formData #error-logo-3 {
+    left: 40px;
+ 
+   
+   }
+ }
+
+ 
+ @media screen and (max-width: 400px) {
+  .formData #error-logo-3 {
+    left: 30px;
+  
+   
+   }
+ }
+
+
+ 
+ @media screen and (max-width: 380px) {
+  .formData #error-logo-3 {
+    left: 230px;
+
+   
+   }
+ }
+
+ @media screen and (max-width: 370px) {
+  .formData #error-logo-3 {
+    left: 250px;
+    top: -70px;
+   
+   }
+ }
+
+
+ @media screen and (max-width: 320px) {
+  .formData #error-logo-3 {
+    left: 230px;
+ 
+   
+   }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width: 535px) {
+  .formData #error-logo-4 {
+    left: 310px;
+  
+   
+   }
+ }
+
+ @media screen and (max-width: 500px) {
+  .formData #error-logo-4 {
+    left: 280px;
+    
+   
+   }
+ }
+
+ @media screen and (max-width: 440px) {
+  .formData #error-logo-4 {
+    left: 250px;
+    
+   
+   }
+ }
+
+ @media screen and (max-width: 420px) {
+  .formData #error-logo-4 {
+    left: 230px;
+    
+   
+   }
+ }
+
+ 
+ @media screen and (max-width: 400px) {
+  .formData #error-logo-4 {
+    left: 210px;
+    
+   
+   }
+ }
+
+
+ 
+ @media screen and (max-width: 380px) {
+  .formData #error-logo-4 {
+    left: 210px;
+
+   
+   }
+ }
+
+ @media screen and (max-width: 370px) {
+  .formData #error-logo-4 {
+    left: 190px;
+    
+   
+   }
+ }
+
+ @media screen and (max-width: 350px) {
+  .formData #error-logo-4 {
+    left: 180px;
+ 
+   
+   }
+ }
+
+
+ @media screen and (max-width: 320px) {
+  .formData #error-logo-4 {
+    left: 160px;
+ 
+   
+   }
+ }
+
+
+
+
+
+
+
+
+ @media screen and (max-width: 500px) {
+  .formData #error-logo-5 {
+    left: 320px;
+    top: -70px;
+   
+   }
+ }
+
+ @media screen and (max-width: 440px) {
+  .formData #error-logo-5 {
+    left: 300px;
+    
+   
+   }
+ }
+
+ @media screen and (max-width: 420px) {
+  .formData #error-logo-5 {
+    left: 250px;
+    
+   
+   }
+ }
+
+ 
+ @media screen and (max-width: 400px) {
+  .formData #error-logo-5 {
+    left: 200px;
+    
+   
+   }
+ }
+
+
+ 
+ @media screen and (max-width: 380px) {
+  .formData #error-logo-5 {
+    left: 200px;
+
+   
+   }
+ }
+
+ @media screen and (max-width: 370px) {
+  .formData #error-logo-5 {
+    left: 190px;
+
+   
+   }
+ }
+
+ @media screen and (max-width: 350px) {
+  .formData #error-logo-5 {
+    left: 120px;
+ 
+   
+   }
+ }
+
+
+ @media screen and (max-width: 320px) {
+  .formData #error-logo-5 {
+    left: 100px;
+ 
+   
+   }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @media screen and (max-width: 535px) {
   .formData #check-logo-1 {
     left: 350px;
    
@@ -754,6 +1182,79 @@ left: 190px;
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* FIREFOX */
 
 @-moz-document url-prefix() {
@@ -788,6 +1289,67 @@ left: 190px;
   left: -20px;
 
  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
  /* MOBILE FIREFOX LOGO */
 
