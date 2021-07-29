@@ -96,122 +96,6 @@ function isLongEnough(currentLength, minimumLength) {
   return currentLength >= minimumLength ? true : false;
 } 
 
-
-/*
-// Validate form
-function validate(e) {
-  e.preventDefault();
-  const isFirstValid = isLongEnough(firstElt.value.length, 2) ? true : false;
-  console.log(isFirstValid);
-
-  if(isFirstValid === false) {
-	errorFirst.textContent = 'Le champ prénom doit être composé de minimum 2 caractères.';
-	errorFirst.style.visibility = "visible";
-  firstElt.style.borderColor = "#e74c3c";
-  logoError1.style.visibility = "visible";
-  } else {
-    errorFirst.textContent = '';
-    errorFirst.style.visibility = "hidden";
-    firstElt.style.borderColor = "#2ecc71";
-    logoError1.style.visibility = "hidden";
-    logoCheck1.style.visibility = "visible";
-
-  }
-
-  const isLastValid = isLongEnough(lastElt.value.length, 2) ? true : false;
-  console.log(isLastValid);
-
-  if(isLastValid === false) {
-    error2.textContent = 'Le champ nom doit être composé de minimum 2 caractères.';
-    error2.style.visibility = "visible";
-    lastElt.style.borderColor = "#e74c3c";
-    logoError2.style.visibility = "visible";
-    } else {
-      error2.textContent = '';
-      error2.style.visibility = "hidden";
-      lastElt.style.borderColor = "#2ecc71";
-      logoError2.style.visibility = "hidden";
-      logoCheck2.style.visibility = "visible";
-  
-    }
-
-
-
-  var x=document.reserve.email.value;  
-  var atposition=x.indexOf("@");  
-  var dotposition=x.lastIndexOf(".");  
-    
-    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
-
-        error3.textContent = 'L\'email entré n\'est pas valide.';
-        error3.style.visibility = "visible";
-        email.style.borderColor = "#e74c3c";
-        logoError3.style.visibility = "visible";
-    
-        
-      } else {
-        error3.textContent = '';
-        error3.style.visibility = "hidden";
-        email.style.borderColor = "#2ecc71";
-        logoError3.style.visibility = "hidden";
-        logoCheck3.style.visibility = "visible";
-    
-      }
-
-
-
-
-
-
-
-
-
-
-
-  const isQuantityValid = isLongEnough(quantityElt.value.length, 1) ? true : false;
-  console.log(isQuantityValid);
-
-  if(isQuantityValid === false || quantityElt.value < 0 || quantityElt.value > 99)  {
-    error5.textContent = 'Veuillez rentrer un chiffre entre 0 et 99.';
-    error5.style.visibility = "visible";
-    quantityElt.style.borderColor = "#e74c3c";
-    logoError5.style.visibility = "visible";
-    } else {
-      error5.textContent = '';
-      error5.style.visibility = "hidden";
-      quantityElt.style.borderColor = "#2ecc71";
-      logoError5.style.visibility = "hidden";
-      logoCheck5.style.visibility = "visible";
-  
-    }
-
-
-    if (locationValid == false) {
-      e.preventDefault();
-      first.focus();
-      error6.textContent = "Veuillez cocher une ville";
-    }
-
-
-
-}*/
-/*
-function isEmail(email) {
-	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
-}
-
-function birthdateValid(date) {
-  return /^(0[1-9]|[12]\d|3[01])\/(0[1-9]|1[0-2])\/(19|20)\d{2}$/.test(date);
-}
-*/
-
-
-
-
-/*function test(e) {*/
-
-
-
 btn = document.getElementById('btn-submit');
 birthdate = document.getElementById('birthdate');
 
@@ -278,18 +162,34 @@ btn.addEventListener("click", function(e){
       }
 
 
+let todayDate = new Date(birthdate.value);
+let dateBirthdate = new Date();
 
 
-var dob =new Date(birthdate.value);
+dateBirthdate.setFullYear(dateBirthdate.getFullYear() - 18);
+
+const fullDate = `${dateBirthdate.getDate()}/${dateBirthdate.getMonth() + 1}/${dateBirthdate.getFullYear()}`;
+
+const Datetd = `${todayDate.getDate()}/${todayDate.getMonth() + 1}/${todayDate.getFullYear()}`;
+
+console.log(fullDate);
+console.log(Datetd);
+console.log(todayDate);
+
+/*var dob =new Date(birthdate.value);*/
 /*
 alert(dob);
 console.log(dob);*/
-
-var month = dob.getMonth(); // months start counting from zero!
+/*
+var month = dob.getMonth();
 var day   = dob.getDate();  
 var year  = dob.getFullYear();
 
-if(dob == 'Invalid Date') {
+*/
+
+
+
+if(todayDate == 'Invalid Date') {
   error4.textContent = 'Veuillez rentrer une date valide.';
   error4.style.visibility = "visible";
   birthdateElt.style.borderColor = "#e74c3c";
@@ -297,19 +197,19 @@ if(dob == 'Invalid Date') {
   logoCheck4.style.visibility = "hidden";
   
 
-} else if (year > 2002) {
+} else if (todayDate > fullDate) {
   error4.textContent = 'Vous n\'avez pas l\'âge nécessaire pour participer à ce concours';
   error4.style.visibility = "visible";
   birthdateElt.style.borderColor = "#e74c3c";
   logoError4.style.visibility = "visible";
   logoCheck4.style.visibility = "hidden";
-} else if (year < 1900) {
+} /*else if (year < 1900) {
   error4.textContent = 'Vous êtes un peu âgé, non ? :)';
   error4.style.visibility = "visible";
   birthdateElt.style.borderColor = "#e74c3c";
   logoError4.style.visibility = "visible";
   logoCheck4.style.visibility = "hidden";
-} else {
+}*/ else {
     error4.textContent = '';
     error4.style.visibility = "hidden";
     birthdateElt.style.borderColor = "#2ecc71";
@@ -317,6 +217,24 @@ if(dob == 'Invalid Date') {
     logoCheck4.style.visibility = "visible";
 
   } 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
   
