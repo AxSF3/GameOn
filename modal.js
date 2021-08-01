@@ -143,10 +143,10 @@ btn.addEventListener("click", function(e){
   var x=document.reserve.email.value;  
   var atposition=x.indexOf("@");  
   var dotposition=x.lastIndexOf(".");  
-  var pattern = /^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$/;  
+  var regularExpressions = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  
 
 
-    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length && email.value == pattern ) {  
+    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length && email.value == regularExpressions ) {  
 
         error3.textContent = 'L\'email entré n\'est pas valide.';
         error3.style.visibility = "visible";
@@ -162,7 +162,11 @@ btn.addEventListener("click", function(e){
         logoCheck3.style.visibility = "visible";
     
       }
-    
+ 
+
+
+
+
 
 
 let todayDate = new Date(birthdate.value);
@@ -177,7 +181,7 @@ const Datetd = `${todayDate.getDate()}/${todayDate.getMonth() + 1}/${todayDate.g
 
 console.log(fullDate);
 console.log(Datetd);
-console.log(todayDate);
+/*console.log(todayDate);*/
 
 /*var dob =new Date(birthdate.value);*/
 /*
@@ -200,7 +204,7 @@ if(todayDate == 'Invalid Date') {
   logoCheck4.style.visibility = "hidden";
   
 
-} else if (todayDate > fullDate) {
+} else if (Datetd >= fullDate) {
   error4.textContent = 'Vous n\'avez pas l\'âge nécessaire pour participer à ce concours';
   error4.style.visibility = "visible";
   birthdateElt.style.borderColor = "#e74c3c";
