@@ -143,8 +143,10 @@ btn.addEventListener("click", function(e){
   var x=document.reserve.email.value;  
   var atposition=x.indexOf("@");  
   var dotposition=x.lastIndexOf(".");  
-    
-    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  var pattern = /^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$/;  
+
+
+    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length && email.value == pattern ) {  
 
         error3.textContent = 'L\'email entré n\'est pas valide.';
         error3.style.visibility = "visible";
@@ -160,6 +162,7 @@ btn.addEventListener("click", function(e){
         logoCheck3.style.visibility = "visible";
     
       }
+    
 
 
 let todayDate = new Date(birthdate.value);
