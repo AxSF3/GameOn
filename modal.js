@@ -111,6 +111,7 @@ btn.addEventListener("click", function(e){
 	errorFirst.style.visibility = "visible";
   firstElt.style.borderColor = "#e74c3c";
   logoError1.style.visibility = "visible";
+  logoCheck1.style.visibility = "hidden";
   
   } else {
     errorFirst.textContent = '';
@@ -129,6 +130,8 @@ btn.addEventListener("click", function(e){
     error2.style.visibility = "visible";
     lastElt.style.borderColor = "#e74c3c";
     logoError2.style.visibility = "visible";
+    logoCheck2.style.visibility = "hidden";
+
     } else {
       error2.textContent = '';
       error2.style.visibility = "hidden";
@@ -138,32 +141,25 @@ btn.addEventListener("click", function(e){
   
     }
 
+var regularExpressions = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 
 
-  var x=document.reserve.email.value;  
-  var atposition=x.indexOf("@");  
-  var dotposition=x.lastIndexOf(".");  
-  var regularExpressions = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;  
+if (!regularExpressions.test(email.value) ) {  
 
+  error3.textContent = 'L\'email entré n\'est pas valide.';
+  error3.style.visibility = "visible";
+  email.style.borderColor = "#e74c3c";
+  logoError3.style.visibility = "visible";
+  logoCheck3.style.visibility = "hidden";
+  
+} else {
+  error3.textContent = '';
+  error3.style.visibility = "hidden";
+  email.style.borderColor = "#2ecc71";
+  logoError3.style.visibility = "hidden";
+  logoCheck3.style.visibility = "visible";
 
-    if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length && email.value == regularExpressions ) {  
-
-        error3.textContent = 'L\'email entré n\'est pas valide.';
-        error3.style.visibility = "visible";
-        email.style.borderColor = "#e74c3c";
-        logoError3.style.visibility = "visible";
-    
-        
-      } else {
-        error3.textContent = '';
-        error3.style.visibility = "hidden";
-        email.style.borderColor = "#2ecc71";
-        logoError3.style.visibility = "hidden";
-        logoCheck3.style.visibility = "visible";
-    
-      }
- 
-
+}
 
 
 
@@ -171,30 +167,10 @@ btn.addEventListener("click", function(e){
 
 let todayDate = new Date(birthdate.value);
 let dateBirthdate = new Date();
-
+let dateBirthdateOld = new Date();
 
 dateBirthdate.setFullYear(dateBirthdate.getFullYear() - 18);
-
-const fullDate = `${dateBirthdate.getDate()}/${dateBirthdate.getMonth() + 1}/${dateBirthdate.getFullYear()}`;
-
-const Datetd = `${todayDate.getDate()}/${todayDate.getMonth() + 1}/${todayDate.getFullYear()}`;
-
-console.log(fullDate);
-console.log(Datetd);
-/*console.log(todayDate);*/
-
-/*var dob =new Date(birthdate.value);*/
-/*
-alert(dob);
-console.log(dob);*/
-/*
-var month = dob.getMonth();
-var day   = dob.getDate();  
-var year  = dob.getFullYear();
-
-*/
-
-
+dateBirthdateOld.setFullYear(dateBirthdateOld.getFullYear() - 130);
 
 if(todayDate == 'Invalid Date') {
   error4.textContent = 'Veuillez rentrer une date valide.';
@@ -204,19 +180,19 @@ if(todayDate == 'Invalid Date') {
   logoCheck4.style.visibility = "hidden";
   
 
-} else if (Datetd >= fullDate) {
+} else if (todayDate.getTime() >= dateBirthdate.getTime()) {
   error4.textContent = 'Vous n\'avez pas l\'âge nécessaire pour participer à ce concours';
   error4.style.visibility = "visible";
   birthdateElt.style.borderColor = "#e74c3c";
   logoError4.style.visibility = "visible";
   logoCheck4.style.visibility = "hidden";
-} /*else if (year < 1900) {
+} else if (todayDate.getTime() <= dateBirthdateOld.getTime()) {
   error4.textContent = 'Vous êtes un peu âgé, non ? :)';
   error4.style.visibility = "visible";
   birthdateElt.style.borderColor = "#e74c3c";
   logoError4.style.visibility = "visible";
   logoCheck4.style.visibility = "hidden";
-}*/ else {
+} else {
     error4.textContent = '';
     error4.style.visibility = "hidden";
     birthdateElt.style.borderColor = "#2ecc71";
@@ -228,24 +204,6 @@ if(todayDate == 'Invalid Date') {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-
   const isQuantityValid = isLongEnough(quantityElt.value.length, 1) ? true : false;
   console.log(isQuantityValid);
 
@@ -254,6 +212,7 @@ if(todayDate == 'Invalid Date') {
     error5.style.visibility = "visible";
     quantityElt.style.borderColor = "#e74c3c";
     logoError5.style.visibility = "visible";
+    logoCheck5.style.visibility = "hidden";
     } else {
       error5.textContent = '';
       error5.style.visibility = "hidden";
