@@ -9,7 +9,7 @@
 
 // DOM Elements
 const modalbg = document.querySelector(".bground");
-const modalBtn = document.querySelectorAll(".modal-btn");
+const modalBtn = document.querySelector(".modal-btn");
 const formData = document.querySelectorAll(".formData");
 const close = document.querySelector(".close");
 const succesMessage = document.getElementById("succes-message");
@@ -28,7 +28,9 @@ function closeModal() {
 }
 
 // launch modal event
-modalBtn.forEach((btn) => btn.addEventListener("click", launchModal));
+modalBtn.addEventListener("click", () => {
+  launchModal();
+});
 
 //close modal form event
 
